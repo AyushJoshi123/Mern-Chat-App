@@ -1,5 +1,5 @@
 import { generateToken } from "../lib/utils.js";
-import User from "../models/user.model.js";
+import User from "../models/user.js";
 import bcrypt from "bcryptjs";
 import cloudinary from "../lib/cloudinary.js";
 
@@ -49,7 +49,7 @@ try {
 }
 
 
-export const login = async (req, res) => {
+export const signin = async (req, res) => {
   const { email, password } = req.body;
   try {
     const user = await User.findOne({ email });
