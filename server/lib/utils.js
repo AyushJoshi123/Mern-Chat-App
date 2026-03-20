@@ -1,8 +1,6 @@
 import jwt from "jsonwebtoken";
 
-/**
- * 🔐 Generate JWT Token & set cookie
- */
+
 export const generateToken = (userId, res) => {
   const token = jwt.sign(
     { userId },                    // payload
