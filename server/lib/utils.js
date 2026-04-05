@@ -16,7 +16,7 @@ export const generateToken = (userId, res) => {
     secure: process.env.NODE_ENV !== "development",
     sameSite: "strict",            // CSRF protection
     maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
-  });
+  });// we are adding a comment 
 
   return token;
 };
